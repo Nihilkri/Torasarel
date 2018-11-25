@@ -1,0 +1,7 @@
+
+
+empire = ""
+
+
+def new():
+    pass
