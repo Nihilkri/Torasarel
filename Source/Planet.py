@@ -2,11 +2,12 @@ from Solarbody import Solarbody
 
 
 class Planet(Solarbody.Solarbody):
-    pop = []
-    water = []
-    metals = []
-    silicates = []
+    # Materials are 2d arrays for subsurface and surface versions
+    name = ""
+    water = [100, 10]
+    metals = [100, 10]
+    silicates = [100, 10]
 
-    def __init__(self, newName, newType, newParent, numChildren):
-        super().Solarbody(self, newName, newType, newParent, numChildren)
+    def __init__(self, newName, newParent, numChildren):
+        super().Solarbody(self, newName, newParent, numChildren)
         pass

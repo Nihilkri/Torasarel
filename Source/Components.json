@@ -1,0 +1,37 @@
+"Components" : {
+    "Engines" : {
+        "1" : {
+            "Thrust" : 1.0,
+            "Mass" : 1.0,
+            "Isp" : 1.0
+        },
+        "Fast" : {
+            "Thrust" : 2.0,
+            "Mass" : 1.0,
+            "Isp" : 1.0
+        },
+        "Heavy" : {
+            "Thrust" : 1.0,
+            "Mass" : 2.0,
+            "Isp" : 1.0
+        },
+        "Costly" : {
+            "Thrust" : 1.0,
+            "Mass" : 1.0,
+            "Isp" : 2.0
+        }
+    },
+    "LivingSpace" : {
+        "Small" : {
+            "Volume" : 1e3
+        },
+        "Large" : {
+            "Volume" : 5e3
+        }
+    },
+    "Reactor" : {
+        "NuclearFusion" : {
+            "Volume" : 1e4
+        }
+    }
+}

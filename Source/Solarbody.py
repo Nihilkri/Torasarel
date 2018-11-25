@@ -3,14 +3,13 @@
 class Solarbody:
     # Variables
     name = ""
-    typ = ""
     parent = []
     children = []
-    position = [0, 0]
+    position = []
 
-    def __init__(self, newName, newType, newParent, numChildren):
+    def __init__(self, newName, newParent, newPosition, numChildren):
         self.name = newName
-        self.typ = newType
         self.parent = newParent[:]
-        for child in range(numChildren):
-            pass  # self.children.append()
+        self.position = newPosition[:]
+        # for child in range(numChildren):
+        pass  # self.children.append()

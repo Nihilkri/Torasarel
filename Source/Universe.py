@@ -1,3 +1,4 @@
+from random import Random
 import Solarbody
 
 
@@ -11,11 +12,11 @@ class Universe:
     def __init__(self, newGameName, numStars,
                  numAveragePlanets, numEmpires):
         self.gamename = newGameName
+        rand = Random().randint
         for star in range(numStars):
-            pos = [(star % 3 + 1) * 160,
-                   (star / 3 + 1) * 160]
-            print("Planet")
-            p = Solarbody(star + "", "Planet", pos, [])
+            pos = [rand(640 * 0.1, 640 * 0.9), rand(640 * 0.1, 640 * 0.9)]
+            print(str(star) + " " + str(pos))
+            p = Solarbody.Solarbody("Planet " + str(star), [], pos, 0)
             self.stars.append(p)
         for empire in range(numEmpires):
             pass  # self.empires.append()
