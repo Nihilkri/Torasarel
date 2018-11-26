@@ -1,18 +1,11 @@
 import sys
 import cmath
-import random
-import json
 import pygame
 import pygame.locals
+import json
+from Globals import *
 import Universe
 import Solarbody
-
-# constants
-clock, screen = 0, 0
-WINSIZE = [640, 640]
-WINCENTER = [320, 320]
-white = 255, 255, 255
-black = 0, 0, 0
 
 
 def pyinit():

@@ -1,4 +1,4 @@
-from random import Random
+from Globals import *
 import Solarbody
 
 
@@ -12,7 +12,6 @@ class Universe:
     def __init__(self, newGameName, numStars,
                  numAveragePlanets, numEmpires):
         self.gamename = newGameName
-        rand = Random().randint
         for star in range(numStars):
             pos = [rand(640 * 0.1, 640 * 0.9), rand(640 * 0.1, 640 * 0.9)]
             print(str(star) + " " + str(pos))
