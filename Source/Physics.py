@@ -4,14 +4,28 @@ import Solarbody
 
 
 # Constants
-G = 0
+G = 6.67408e-11  # m3*kg-1*s-2, Gravitational Constant
 
 
-def neworbit():
+def newstar(body: Solarbody):
+    # Creates a new star
+    pass
+
+
+def newplanet(body: Solarbody):
+    # Creates a new planet
+    mass = 5.97237e21 * rand(55, 317800) # Between Mercury and Jupiter
+    orbit = physics.neworbit()
+
+
+def neworbit(body: Solarbody):
     # Calculates a new randomized orbit for new solar bodies
-    # Eccentricity (e)—shape of the ellipse, describing how much it is elongated compared to a circle
-    e = rand(0, 100) / 100
+    m, M = body.mass, body.parent.mass
     # Semimajor axis (a)—the sum of the periapsis and apoapsis distances divided by two
+    a = 100
+    # Eccentricity (e)—shape of the ellipse, describing how much it is elongated compared to a circle
+    e = -G * (m + M) / 2 / a
+    
     # Inclination (i)—vertical tilt of the ellipse with respect to the reference plane, measured at the ascending node
     # Longitude of the ascending node (o)—horizontally orients the ascending node of the ellipse with respect to the reference frame's vernal point
     # Argument of periapsis (w) defines the orientation of the ellipse in the orbital plane, as an angle measured from the ascending node to the periapsis
@@ -23,13 +37,3 @@ def pos(body: Solarbody, t: int, win: rect):
     X, Y, Z = pos(body.parent, t, win)
 
 
-
-# https://en.wikipedia.org/wiki/Orbital_elements
-# https://en.wikipedia.org/wiki/Equinox#Celestial_coordinate_systems
-# https://en.wikipedia.org/wiki/Orbital_eccentricity
-# https://en.wikipedia.org/wiki/Reduced_mass
-# https://en.wikipedia.org/wiki/Specific_orbital_energy
-# https://en.wikipedia.org/wiki/Gravitational_constant
-# https://www.pygame.org/docs/ref/time.html
-# https://docs.python.org/3/library/sys.html#module-sys
-# https://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python

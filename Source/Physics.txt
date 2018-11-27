@@ -1,0 +1,11 @@
+# https://en.wikipedia.org/wiki/Orbital_elements
+# https://en.wikipedia.org/wiki/Equinox#Celestial_coordinate_systems
+# https://en.wikipedia.org/wiki/Orbital_eccentricity
+# https://en.wikipedia.org/wiki/Reduced_mass
+# https://en.wikipedia.org/wiki/Specific_orbital_energy
+# https://en.wikipedia.org/wiki/Gravitational_constant
+# https://www.pygame.org/docs/ref/time.html
+# https://docs.python.org/3/library/sys.html#module-sys
+# https://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python
+
+Star's orbits are based on their position in the galaxy, with the effective mass of the barycenter based on the mass above and below the radius
