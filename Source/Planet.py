@@ -1,4 +1,4 @@
-from Solarbody import Solarbody
+from Globals import *
 
 
 class Planet(Solarbody.Solarbody):

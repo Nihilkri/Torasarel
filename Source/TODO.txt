@@ -1,0 +1,13 @@
+PHASE 1: Planets
+Add JSON parser
+Add base components
+Finish the orbital parameter calculations
+
+PHASE 2: Colonization
+Implement mining and factories
+Implement planet construction
+
+PHASE 3: Ships
+Implement ship construction
+Implement ship systems
+

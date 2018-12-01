@@ -1,0 +1,9 @@
+Colonization modules use the same LivingSpace module that planets use, not cargo space
+
+Race modification window contains living space types
+
+ZL: Idea for our space game: LivingSpace is self sustaining but low volume, while HiCapLivingSpace is high volume, but requires water from other planets. This would give a reason to have systems that only produce food for exporting and systems that only contain pop. It'd also give an option for building tall / increasing core world pop cap
+KN: Food and water need their own production and storage, you can't dump them onto the warehouse floor
+
+Fuel, water are tanked resources. Each ship has a certain capacity, which is decreased over time by a rate which is a function of engine efficiency for fuel and water needs for water. Water is renewable in that it can be recycled from farm and waste modules.
+

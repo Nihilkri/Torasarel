@@ -1,27 +1,42 @@
+"Template" : {
+    "ModuleClass" : {
+        "Module" : {
+            "Attribute" : 0
+        }
+    }
+}
+
 "Components" : {
     "Engines" : {
         "1" : {
+            "Volume" : 50,
             "Thrust" : 1.0,
             "Mass" : 1.0,
             "Isp" : 1.0
         },
         "Fast" : {
+            "Volume" : 50,
             "Thrust" : 2.0,
             "Mass" : 1.0,
             "Isp" : 1.0
         },
         "Heavy" : {
+            "Volume" : 50,
             "Thrust" : 1.0,
             "Mass" : 2.0,
             "Isp" : 1.0
         },
         "Costly" : {
+            "Volume" : 50,
             "Thrust" : 1.0,
             "Mass" : 1.0,
             "Isp" : 2.0
         }
     },
-    "LivingSpace" : {
+    "LivingSpaces" : {
+        "Crew" : {
+            "Volume" : 50
+        },
         "Small" : {
             "Volume" : 1e3
         },
@@ -29,9 +44,40 @@
             "Volume" : 5e3
         }
     },
-    "Reactor" : {
+    "CargoSpaces" : {
+        "Small" : {
+            "Volume" : 1e4,
+            "Cargospace" : 1e4
+        },
+        "Large" : {
+            "Volume" : 5e4
+        },
+        "LivingSpace" : {
+            "Volume" : 1e3,
+            "Livingspace" : 100
+        },
+        "SmallPlanet" : {
+            "Volume" : 1e16
+        },
+    },
+    "WaterSpaces"
+    "Reactors" : {
         "NuclearFusion" : {
-            "Volume" : 1e4
+            "Volume" : 1e4,
+            "Input" : {
+                "Water" : 2
+            },
+            "Output" : {
+                "Oxygen" : 2,
+                "Electricity" : 10,
+                "Helium" : 1,
+                "Heat" : 5
+            }
+        }
+    },
+    "Radiators" : {
+        "SmallRadiator" : {
+            "SurfaceArea" : 1
         }
     }
 }

@@ -1,5 +1,5 @@
 from Globals import *
-import physics
+# import Physics
 
 
 class Solarbody:
@@ -9,7 +9,7 @@ class Solarbody:
     children = []
     position = []
     # Orbital Parameters
-    orbit = (,)
+    orbit = ()
     mass = 0
 
     def __init__(self, newName, newParent, newPosition, numChildren):
@@ -18,9 +18,10 @@ class Solarbody:
         self.position = newPosition[:]
         # for child in range(numChildren):
         pass  # self.children.append()
-        if self.parent.length == 0:
-            physics.newstar(self)
-        else
-            physics.newplanet(self)
+        # if self.parent.length == 0:
+        #     physics.newstar(self)
+        # else:
+        #     physics.newplanet(self)
 
-
+    def tostr(self):
+        return self.name + " @" + str(self.position)
