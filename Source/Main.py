@@ -3,6 +3,7 @@ import cmath
 import pygame
 import pygame.locals
 import json
+import os
 from Globals import *
 
 
@@ -10,6 +11,7 @@ def pyinit():
     global clock, screen
     clock = pygame.time.Clock()
     # initialize and prepare screen
+    os.environ['SDL_VIDEO_WINDOW_POS'] = '%d,%d' % (2000, 250)
     pygame.init()
     screen = pygame.display.set_mode(WINSIZE)
     pygame.display.set_caption("Toras'arel by Nihil K'ri")
