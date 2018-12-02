@@ -7,4 +7,7 @@ KN: Food and water need their own production and storage, you can't dump them on
 
 KN: Fuel, water are tanked resources. Each ship has a certain capacity, which is decreased over time by a rate which is a function of engine efficiency for fuel and water needs for water. Water is renewable in that it can be recycled from farm and waste modules.
 
-ZL: Mountain ranges are nebula or asteroid belts (something that blocks both vision and movement) 
+ZL: Mountain ranges are nebula or asteroid belts (something that blocks both vision and movement)
+
+ZL: Planets are components of stars. Everything from ships to stars would have the same logic behind them. Use the same window you'd use to build ships to build on planets
+

@@ -15,8 +15,8 @@ class Universe:
         self.gamename = newGameName
         print(usize)
         for star in range(numStars):
-            pos = [rand(int(usize[0] * 0.1), int(usize[0] * 0.9)),
-                   rand(int(usize[1] * 0.1), int(usize[1] * 0.9))]
+            pos = [rand(int(usize[0] * 0.05), int(usize[0] * 0.95)),
+                   rand(int(usize[1] * 0.05), int(usize[1] * 0.95))]
             # print(str(star) + " " + str(pos))
             c = rand(0, 8)
             p = Solarbody("Star " + str(star) + ", " + str(c), [], pos, c)

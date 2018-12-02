@@ -29,7 +29,7 @@ def startup():
     components = json.loads('"Components.json"')
     print(components)
     print(json.dumps(components))
-    universe = Universe("Test", WINSIZE, 32, 1, 1)
+    universe = Universe("Test", WINSIZE, 256, 1, 1)
     return
 
 
@@ -61,6 +61,8 @@ def drawframe():
     screen.fill(black)
     # print(frame, clock, str(pygame.time.get_ticks()))
     # Draw things
+    pygame.draw.rect(screen, red, (WINSIZE[0] * 0.05, WINSIZE[1] * 0.05,
+                                   WINSIZE[0] * 0.9, WINSIZE[1] * 0.9), 1)
     for star in universe.stars:
         if len(star.children) >= 0:
             pygame.draw.rect(screen, (255, 255, 255),
