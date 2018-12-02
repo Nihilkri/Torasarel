@@ -1,12 +1,4 @@
-"Template" : {
-    "ModuleClass" : {
-        "Module" : {
-            "Attribute" : 0
-        }
-    }
-}
-
-"Components" : {
+{
     "Engines" : {
         "1" : {
             "Volume" : 50,
@@ -59,8 +51,10 @@
         "SmallPlanet" : {
             "Volume" : 1e16
         },
+        "MediumPlanet" : {
+            "Volume" : 1e21
+        }
     },
-    "WaterSpaces"
     "Reactors" : {
         "NuclearFusion" : {
             "Volume" : 1e4,

@@ -26,7 +26,8 @@ def startup():
     global universe, components
     pyinit()
     # TODO: Write JSON parser and component loader
-    components = json.loads('"Components.json"')
+    with open("Components.json", "r") as jsonfile:
+        components = json.load(jsonfile)
     print(components)
     print(json.dumps(components))
     universe = Universe("Test", WINSIZE, 256, 1, 1)
