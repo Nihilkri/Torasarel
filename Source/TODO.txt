@@ -1,5 +1,5 @@
 PHASE 1: Planets
-Add JSON parser
+Write JSON parser and component loader
 Add base components
 Finish the orbital parameter calculations
 

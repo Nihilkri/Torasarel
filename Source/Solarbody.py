@@ -16,6 +16,7 @@ class Solarbody:
         self.name = newName
         self.parent = newParent[:]
         self.position = newPosition[:]
+        self.children = [0 for child in range(numChildren)]
         # for child in range(numChildren):
         pass  # self.children.append()
         # if self.parent.length == 0:
