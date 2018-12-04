@@ -25,4 +25,5 @@ class Solarbody:
         #     physics.newplanet(self)
 
     def tostr(self):
-        return self.name + " @" + str(self.position)
+        return self.name + " +" + str(len(self.children
+                                          )) + " @" + str(self.position)

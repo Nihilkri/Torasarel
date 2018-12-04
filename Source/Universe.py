@@ -19,8 +19,8 @@ class Universe:
                    rand(int(usize[1] * 0.05), int(usize[1] * 0.95))]
             # print(str(star) + " " + str(pos))
             c = rand(0, 8)
-            p = Solarbody("Star " + str(star) + ", " + str(c), [], pos, c)
+            p = Solarbody("Star " + str(star), [], pos, c)
             self.stars.append(p)
-        print([star.tostr() for star in self.stars])
+        # print([star.tostr() for star in self.stars])
         for empire in range(numEmpires):
             pass  # self.empires.append()

@@ -58,15 +58,11 @@
     "Reactors" : {
         "NuclearFusion" : {
             "Volume" : 1e4,
-            "Input" : {
-                "Water" : 2
-            },
-            "Output" : {
-                "Oxygen" : 2,
-                "Electricity" : 10,
-                "Helium" : 1,
-                "Heat" : 5
-            }
+            "Water" : -2,
+            "Oxygen" : 2,
+            "Electricity" : 10,
+            "Helium" : 1,
+            "Heat" : 5
         }
     },
     "Radiators" : {

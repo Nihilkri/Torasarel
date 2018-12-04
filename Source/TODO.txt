@@ -11,3 +11,18 @@ PHASE 3: Ships
 Implement ship construction
 Implement ship systems
 
+
+
+Add
+    Starmap zoom
+    Empire wide resources
+    Object construction window
+    Ship flight paths / Trade routes
+
+Tech types
+    Magic
+        Magic missile
+        Fireball
+        Blink Drive
+        Antimagic Shield
+        Necromancy / Enchantment to gain destroyed ships / enemy ships
