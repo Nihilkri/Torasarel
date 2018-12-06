@@ -11,33 +11,43 @@ sel = -1
 
 
 def pyinit():
-    global clock, screen, font
+    global clock, screen, font, WINSIZE
     clock = pygame.time.Clock()
     # initialize and prepare screen
     os.environ['SDL_VIDEO_WINDOW_POS'] = '%d,%d' % WINPOS
     pygame.init()
     font = pygame.font.SysFont("lucida console", 24, True)
+    print("WINSIZE, WINPOS, WINCENTER = ", WINSIZE, WINPOS, WINCENTER)
+    infoObject = pygame.display.Info()
+    WINSIZE = (infoObject.current_w, infoObject.current_h)
+    print("WINSIZE = ", WINSIZE)
+    print("infoObject = ", infoObject)
+    print("Modes = ", pygame.display.list_modes())
+    print("WMinfo = ", pygame.display.get_wm_info())
+    # WINSIZE = (640, 640)
     screen = pygame.display.set_mode(WINSIZE, 32)  # 32 is NoFrame
     pygame.display.set_caption("Toras'arel by Nihil K'ri")
     return
 
 
 def startup():
-    global universe, components
+    global universe, components, sel
     pyinit()
     # TODO: Write JSON parser and component loader
     with open("Components.json", "r") as jsonfile:
         components = json.load(jsonfile)
-    # print(components)
-    # print(json.dumps(components))
-    print("Components:")
-    for key in iter(components):
-        print(key + " :")
-        for key2 in iter(components[key]):
-            print("    " + key2 + " :")
-            for key3 in iter(components[key][key2]):
-                print("        " + key3 + " :", components[key][key2][key3])
+    if False:
+        # print(components)
+        # print(json.dumps(components))
+        print("Components:")
+        for key in iter(components):
+            print(key + " :")
+            for key2 in iter(components[key]):
+                print("    " + key2 + " :")
+                for key3 in iter(components[key][key2]):
+                    print("        " + key3 + " :", components[key][key2][key3])
     universe = Universe("Test", WINSIZE, 256, 1, 1)
+    sel = universe.stars[0]
     return
 
 
@@ -73,7 +83,7 @@ def drawframe():
     screen.fill(0x000000)
     # print(frame, clock, str(pygame.time.get_ticks()))
     # Draw things
-    pygame.draw.rect(screen, 0x080000, (WINSIZE[0] * 0.05, WINSIZE[1] * 0.05,
+    pygame.draw.rect(screen, 0x800000, (WINSIZE[0] * 0.05, WINSIZE[1] * 0.05,
                                         WINSIZE[0] * 0.9, WINSIZE[1] * 0.9), 1)
     for star in universe.stars:
         if len(star.children) >= 0:
