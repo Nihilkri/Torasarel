@@ -1,11 +1,84 @@
+# import Globals
 from Globals import *
 import math
-import Solarbody
-rand = Random().gauss
+from random import Random
+from Solarbody import Solarbody
+Rand = Random()
+randi = Rand.randint
+randg = Rand.gauss
 
 
 # Constants
 G = 6.67408e-11  # m3*kg-1*s-2, Gravitational Constant
+
+
+def rand(a: float, b: float):
+    return a + (b - a) * Rand.random()
+
+
+def newuniverse(usize, numStars, numAveragePlanets):
+    # Creates the universe from scratch, starting with the apple pie
+    applepie = 1
+    stars = []
+    # Select the style of universe
+    # 0 = Randomized
+    # 1 = Spaced
+    # 2 = Sectioned
+    # 3 = Globular Cluster
+    # 4 = Spiral Galaxy
+    UniverseStyle = 1
+    if UniverseStyle == 0:
+        for i in range(numStars):
+            # pos = [rand(int(usize[0] * 0.05), int(usize[0] * 0.95)),
+            #        rand(int(usize[1] * 0.05), int(usize[1] * 0.95))]
+            pos = [int(usize[0] * rand(0.05, 0.95)),
+                   int(usize[1] * rand(0.05, 0.95)), 0, 0]
+            # print(str(star) + " " + str(pos))
+            c = randi(0, 8)
+            p = Solarbody("Star " + str(i), [], pos, c)
+            stars.append(p)
+    elif UniverseStyle == 1:
+        for i in range(numStars):
+            clear = False
+            for tries in range(numStars):
+                clear = True
+                # pos = [rand(int(usize[0] * 0.05), int(usize[0] * 0.95)),
+                #        rand(int(usize[1] * 0.05), int(usize[1] * 0.95))]
+                pos = [int(usize[0] * rand(0.05, 0.95)),
+                       int(usize[1] * rand(0.05, 0.95)), 0, 0]
+                for ii in range(i):
+                    iipos = stars[ii].position
+                    d = ((pos[0] - iipos[0]) ** 2 +
+                         (pos[1] - iipos[1]) ** 2) ** 0.5
+                    if d < 30:
+                        # print("Collision between new star", i, "at", pos[:2],
+                        #       "and ", ii, "at", iipos[:2], d)
+                        clear = False
+                        break
+                if clear:
+                    # print("Star", i, "successful at", pos[:2])
+                    break
+            if not clear:
+                print("Ran out of tries at star", i)
+                numStars = i - 1
+                break
+            # print(str(star) + " " + str(pos))
+            c = randi(0, 8)
+            p = Solarbody("Star " + str(i), [], pos, c)
+            stars.append(p)
+    elif UniverseStyle == 2:
+        pass
+    elif UniverseStyle == 3:
+        pass
+    elif UniverseStyle == 4:
+        pass
+    elif UniverseStyle == 5:
+        pass
+    elif UniverseStyle == 6:
+        pass
+    else:
+        pass
+    return stars
 
 
 def newstar(body: Solarbody):

@@ -18,6 +18,7 @@ def pyinit():
     pygame.init()
     font = pygame.font.SysFont("lucida console", 24, True)
     print("WINSIZE, WINPOS, WINCENTER = ", WINSIZE, WINPOS, WINCENTER)
+    print("Display = ", pygame.display)
     infoObject = pygame.display.Info()
     WINSIZE = (infoObject.current_w, infoObject.current_h)
     print("WINSIZE = ", WINSIZE)
@@ -103,7 +104,7 @@ def drawframe():
     pygame.draw.line(screen, 0x00FFFF,
                      (0, mxy[1]), (WINSIZE[0], mxy[1]), 1)
     if sel != -1:
-        pygame.draw.circle(screen, 0xFF0000, sel.position, 15, 1)
+        pygame.draw.circle(screen, 0xFF0000, sel.position[:2], 15, 1)
         frend = font.render(sel.tostr(), 1, (255, 0, 0), (64, 64, 64))
         fpos = frend.get_size()
         screen.blit(frend, (sel.position[0] - fpos[0] / 2,
@@ -115,7 +116,7 @@ def drawframe():
     for star in universe.stars:
         if ((abs(mxy[0] - star.position[0]) < 15) &
                 (abs(mxy[1] - star.position[1]) < 15)):
-            pygame.draw.circle(screen, 0x00FFFF, star.position, 15, 1)
+            pygame.draw.circle(screen, 0x00FFFF, star.position[:2], 15, 1)
             frend = font.render(star.tostr(), 1,
                                 (0, 0, 0), (192, 192, 192))
             fpos = frend.get_size()
@@ -124,6 +125,7 @@ def drawframe():
             screen.fill((192, 0, 0),
                         (ful[0] - 2, ful[1] - 5, fpos[0] + 4, fpos[1] + 7))
             screen.blit(frend, ful)
+    # TODO: Draw the fps
     pygame.display.update()
     return
 
@@ -137,6 +139,7 @@ def main():
         drawframe()
         frame += 1
         clock.tick(10)
+    pygame.display.quit()
 
 
 # if python says run, then we should run
