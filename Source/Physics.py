@@ -24,8 +24,9 @@ def newuniverse(usize, numStars, numAveragePlanets):
     # 0 = Randomized
     # 1 = Spaced
     # 2 = Sectioned
-    # 3 = Globular Cluster
-    # 4 = Spiral Galaxy
+    # 3 = Gaussian Globular Cluster
+    # 4 = Keplerian Globular Cluster
+    # 5 = Spiral Galaxy
     UniverseStyle = 1
     if UniverseStyle == 0:
         for i in range(numStars):
@@ -34,9 +35,7 @@ def newuniverse(usize, numStars, numAveragePlanets):
             pos = [int(usize[0] * rand(0.05, 0.95)),
                    int(usize[1] * rand(0.05, 0.95)), 0, 0]
             # print(str(star) + " " + str(pos))
-            c = randi(0, 8)
-            p = Solarbody("Star " + str(i), [], pos, c)
-            stars.append(p)
+            stars.append(newstar(i, pos))
     elif UniverseStyle == 1:
         for i in range(numStars):
             clear = False
@@ -63,9 +62,7 @@ def newuniverse(usize, numStars, numAveragePlanets):
                 numStars = i - 1
                 break
             # print(str(star) + " " + str(pos))
-            c = randi(0, 8)
-            p = Solarbody("Star " + str(i), [], pos, c)
-            stars.append(p)
+            stars.append(newstar(i, pos))
     elif UniverseStyle == 2:
         pass
     elif UniverseStyle == 3:
@@ -81,9 +78,10 @@ def newuniverse(usize, numStars, numAveragePlanets):
     return stars
 
 
-def newstar(body: Solarbody):
+def newstar(num: int, pos: list):
     # Creates a new star
-    pass
+    c = randi(0, 8)
+    return Solarbody("Star " + str(num), [], pos, c)
 
 
 def newplanet(body: Solarbody):

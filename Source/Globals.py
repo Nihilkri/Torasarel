@@ -1,10 +1,8 @@
-if True:
-    global Random, Universe, Solarbody, Physics
-    from random import Random
-    # if __name__ != "__main__":
-    from Universe import Universe
-    from Solarbody import Solarbody
-    import Physics
+from random import Random
+# if __name__ != "__main__":
+from Universe import Universe
+from Solarbody import Solarbody
+import Physics
 Rand = Random
 rand = Rand.random
 randi = Rand.randint
