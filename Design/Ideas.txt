@@ -11,3 +11,13 @@ ZL: Mountain ranges are nebula or asteroid belts (something that blocks both vis
 
 ZL: Planets are components of stars. Everything from ships to stars would have the same logic behind them. Use the same window you'd use to build ships to build on planets
 
+ZL: To build upon line 12, there could also exist components that have an affect on outside entities. This would be rather straight forward with engines, e.g. the power and type of engine gives you different speeds and visibility to other players, but some other examples could be:
+Scanners that would allow engines to be seen by other players in the first place
+Cloaks that would suppress this effect
+Shields that would have to be kept in line with engines to keep debris out while in warp
+Armor that determines how close to a star a ship can be / how long it can stay there
+Tractor beams that effect how much and how far away material can be collected / repositioned
+And components that apply ship self buffs to effect other ships.
+A Self-Repair component that repairs hull / armor / components
+A Beam component that can apply ship effects to an area around the ship, more increasing the range
+A focusing mod to the beam component that reduces the simultanious entities that can be affected, while increasing output
