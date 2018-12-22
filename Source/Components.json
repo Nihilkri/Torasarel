@@ -97,5 +97,9 @@
             "Capacity" : 1e4
             "Power" : 1e4
             "Slots" : 4
-        }
-    "Crew Module"
+        }}
+    "Crew Module" : {
+        "Small Crew Module" : {
+            "Size" : 2
+            "Capacity 10
+        }}
