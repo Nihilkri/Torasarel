@@ -2,22 +2,30 @@ Colonization modules use the same LivingSpace module that planets use, not cargo
 
 Race modification window contains living space types
 
-ZL: Idea for our space game: LivingSpace is self sustaining but low volume, while HiCapLivingSpace is high volume, but requires water from other planets. This would give a reason to have systems that only produce food for exporting and systems that only contain pop. It'd also give an option for building tall / increasing core world pop cap
+ZL: Idea for our space game: LivingSpace is self sustaining but low volume, while HiCapLivingSpace is high volume, but requires
+water from other planets. This would give a reason to have systems that only produce food for exporting and systems that only
+contain pop. It'd also give an option for building tall / increasing core world pop cap
 KN: Food and water need their own production and storage, you can't dump them onto the warehouse floor
 
-KN: Fuel, water are tanked resources. Each ship has a certain capacity, which is decreased over time by a rate which is a function of engine efficiency for fuel and water needs for water. Water is renewable in that it can be recycled from farm and waste modules.
+KN: Fuel, water are tanked resources. Each ship has a certain capacity, which is decreased over time by a rate which is a function
+of engine efficiency for fuel and water needs for water. Water is renewable in that it can be recycled from farm and waste modules.
 
 ZL: Mountain ranges are nebula or asteroid belts (something that blocks both vision and movement)
 
 ZL: Planets are components of stars. Everything from ships to stars would have the same logic behind them. Use the same window you'd use to build ships to build on planets
 
-ZL: To build upon line 12, there could also exist components that have an affect on outside entities. This would be rather straight forward with engines, e.g. the power and type of engine gives you different speeds and visibility to other players, but some other examples could be:
-Scanners that would allow engines to be seen by other players in the first place
-Cloaks that would suppress this effect
-Shields that would have to be kept in line with engines to keep debris out while in warp
-Armor that determines how close to a star a ship can be / how long it can stay there
-Tractor beams that effect how much and how far away material can be collected / repositioned
-And components that apply ship self buffs to effect other ships.
+ZL: To build upon everything having the same components, there could also exist components that have an affect on outside entities
+This would be rather straight forward with engines, e.g. the power and type of engine gives you different speeds and visibility
+to other players, but some other examples could be:
+Scanners that would allow engines and other objects to be seen by other players in the first place
+Cloaks that would suppress the visibility of engine output and the ship as a whole
+Shields that would have to be upgraded along side engines to keep debris out while in ever increasing warp speeds
+Armor that determines how close to a star a ship can be / how long it can stay there, as well as resistance to lasers
+Tractor beams that effect how much and how far away material can be collected / moved, basically a different type of cargo space
+And components that apply ship self buffs and effects to affect other ships.
 A Self-Repair component that repairs hull / armor / components
-A Beam component that can apply ship effects to an area around the ship, more increasing the range
-A focusing mod to the beam component that reduces the simultanious entities that can be affected, while increasing output
+A Aura component that can apply ship effects to an area around the ship, more increasing the range
+A Beam component similar to the aura component that affects a cone away from the ship, with more increasing the range
+An isolator component that contains other components, so a Repair component and a tractor component don't affect the same ships
+These components can be combined to creat modules that effect the entity's surrounding, such as a beam and tractor component
+being combined to create a tractor beam
