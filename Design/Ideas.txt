@@ -78,4 +78,11 @@ First Scout Example:
       
   Solution:
     Scanner - Crew Module - Reactor (Engine type)
+    |S-S|C-C|R-E|
+    |S-S|C-C|R-E|
+    Each module is a Small (size 2), allowing the reactor to hold two components that dictate how the Reactor utilizes its power
+    In this case, each Effect (engine) component should be a beam type component, since this Scout shouldn't be maneuverable, as it
+    doesn't have the staying power to make combat viable. Rather, it should have the fastest possible speed for its Reactor size to
+    explore as fast as it can go, as well as escape danger as fast as possible.
     
+    have any staying power to give it any other 
