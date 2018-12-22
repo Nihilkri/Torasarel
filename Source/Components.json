@@ -71,3 +71,31 @@
         }
     }
 }
+
+{
+    "Reactor" : {
+        "Tiny Reactor" : {
+            "Size" : 1
+            "Capacity" : 10
+            "Power" : 10
+            "Slots" : 1
+        }
+        "Small Reactor" : {
+            "Size" : 2
+            "Capacity" : 100
+            "Power" : 100
+            "Slots" : 2
+        }
+        "Medium Reactor" : {
+            "Size" : 3
+            "Capacity" : 1e3
+            "Power" : 1e3
+            "Slots" : 3
+        }
+        "Large Reactor" : {
+            "Size" : 4
+            "Capacity" : 1e4
+            "Power" : 1e4
+            "Slots" : 4
+        }
+    "Crew Module"
