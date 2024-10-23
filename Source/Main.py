@@ -35,7 +35,7 @@ def startup():
     global universe, components, sel
     pyinit()
     # TODO: Write JSON parser and component loader
-    with open("Components.json", "r") as jsonfile:
+    with open(r"C:\Users\Nihil\Source\Repos\Torasarel\Source\Components.json", "r") as jsonfile:
         components = json.load(jsonfile)
     if False:
         # print(components)
